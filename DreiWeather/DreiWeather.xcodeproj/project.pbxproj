@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA4DE91F2D57639D00E7CAB8 /* DreiWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE91E2D57639D00E7CAB8 /* DreiWeatherApp.swift */; };
+		AA4DE9212D57639D00E7CAB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9202D57639D00E7CAB8 /* ContentView.swift */; };
+		AA4DE9232D57639F00E7CAB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4DE9222D57639F00E7CAB8 /* Assets.xcassets */; };
+		AA4DE9262D57639F00E7CAB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4DE9252D57639F00E7CAB8 /* Preview Assets.xcassets */; };
+		AA4DE9282D57639F00E7CAB8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9272D57639F00E7CAB8 /* Persistence.swift */; };
+		AA4DE92B2D57639F00E7CAB8 /* DreiWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9292D57639F00E7CAB8 /* DreiWeather.xcdatamodeld */; };
+		AA4DE9352D57639F00E7CAB8 /* DreiWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9342D57639F00E7CAB8 /* DreiWeatherTests.swift */; };
+		AA4DE93F2D57639F00E7CAB8 /* DreiWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE93E2D57639F00E7CAB8 /* DreiWeatherUITests.swift */; };
+		AA4DE9412D57639F00E7CAB8 /* DreiWeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9402D57639F00E7CAB8 /* DreiWeatherUITestsLaunchTests.swift */; };
+		AA4DE94F2D57649900E7CAB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA4DE94D2D57649900E7CAB8 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA4DE9312D57639F00E7CAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA4DE9132D57639D00E7CAB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA4DE91A2D57639D00E7CAB8;
+			remoteInfo = DreiWeather;
+		};
+		AA4DE93B2D57639F00E7CAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA4DE9132D57639D00E7CAB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA4DE91A2D57639D00E7CAB8;
+			remoteInfo = DreiWeather;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA4DE91B2D57639D00E7CAB8 /* DreiWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreiWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4DE91E2D57639D00E7CAB8 /* DreiWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreiWeatherApp.swift; sourceTree = "<group>"; };
+		AA4DE9202D57639D00E7CAB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA4DE9222D57639F00E7CAB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA4DE9252D57639F00E7CAB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA4DE9272D57639F00E7CAB8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		AA4DE92A2D57639F00E7CAB8 /* DreiWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreiWeather.xcdatamodel; sourceTree = "<group>"; };
+		AA4DE9302D57639F00E7CAB8 /* DreiWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreiWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4DE9342D57639F00E7CAB8 /* DreiWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreiWeatherTests.swift; sourceTree = "<group>"; };
+		AA4DE93A2D57639F00E7CAB8 /* DreiWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreiWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4DE93E2D57639F00E7CAB8 /* DreiWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreiWeatherUITests.swift; sourceTree = "<group>"; };
+		AA4DE9402D57639F00E7CAB8 /* DreiWeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreiWeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA4DE94E2D57649900E7CAB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA4DE9502D5764BF00E7CAB8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA4DE9182D57639D00E7CAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DE92D2D57639F00E7CAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DE9372D57639F00E7CAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA4DE9122D57639D00E7CAB8 = {
+			isa = PBXGroup;
+			children = (
+				AA4DE9512D5764C500E7CAB8 /* a11y */,
+				AA4DE91D2D57639D00E7CAB8 /* DreiWeather */,
+				AA4DE9332D57639F00E7CAB8 /* DreiWeatherTests */,
+				AA4DE93D2D57639F00E7CAB8 /* DreiWeatherUITests */,
+				AA4DE91C2D57639D00E7CAB8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA4DE91C2D57639D00E7CAB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DE91B2D57639D00E7CAB8 /* DreiWeather.app */,
+				AA4DE9302D57639F00E7CAB8 /* DreiWeatherTests.xctest */,
+				AA4DE93A2D57639F00E7CAB8 /* DreiWeatherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA4DE91D2D57639D00E7CAB8 /* DreiWeather */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DE91E2D57639D00E7CAB8 /* DreiWeatherApp.swift */,
+				AA4DE9202D57639D00E7CAB8 /* ContentView.swift */,
+				AA4DE9222D57639F00E7CAB8 /* Assets.xcassets */,
+				AA4DE9272D57639F00E7CAB8 /* Persistence.swift */,
+				AA4DE9292D57639F00E7CAB8 /* DreiWeather.xcdatamodeld */,
+				AA4DE9242D57639F00E7CAB8 /* Preview Content */,
+			);
+			path = DreiWeather;
+			sourceTree = "<group>";
+		};
+		AA4DE9242D57639F00E7CAB8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DE9252D57639F00E7CAB8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA4DE9332D57639F00E7CAB8 /* DreiWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DE9342D57639F00E7CAB8 /* DreiWeatherTests.swift */,
+			);
+			path = DreiWeatherTests;
+			sourceTree = "<group>";
+		};
+		AA4DE93D2D57639F00E7CAB8 /* DreiWeatherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DE93E2D57639F00E7CAB8 /* DreiWeatherUITests.swift */,
+				AA4DE9402D57639F00E7CAB8 /* DreiWeatherUITestsLaunchTests.swift */,
+			);
+			path = DreiWeatherUITests;
+			sourceTree = "<group>";
+		};
+		AA4DE9512D5764C500E7CAB8 /* a11y */ = {
+			isa = PBXGroup;
+			children = (
+				AA4DE94D2D57649900E7CAB8 /* Localizable.strings */,
+			);
+			path = a11y;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA4DE91A2D57639D00E7CAB8 /* DreiWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4DE9442D57639F00E7CAB8 /* Build configuration list for PBXNativeTarget "DreiWeather" */;
+			buildPhases = (
+				AA4DE9172D57639D00E7CAB8 /* Sources */,
+				AA4DE9182D57639D00E7CAB8 /* Frameworks */,
+				AA4DE9192D57639D00E7CAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreiWeather;
+			productName = DreiWeather;
+			productReference = AA4DE91B2D57639D00E7CAB8 /* DreiWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA4DE92F2D57639F00E7CAB8 /* DreiWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4DE9472D57639F00E7CAB8 /* Build configuration list for PBXNativeTarget "DreiWeatherTests" */;
+			buildPhases = (
+				AA4DE92C2D57639F00E7CAB8 /* Sources */,
+				AA4DE92D2D57639F00E7CAB8 /* Frameworks */,
+				AA4DE92E2D57639F00E7CAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA4DE9322D57639F00E7CAB8 /* PBXTargetDependency */,
+			);
+			name = DreiWeatherTests;
+			productName = DreiWeatherTests;
+			productReference = AA4DE9302D57639F00E7CAB8 /* DreiWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA4DE9392D57639F00E7CAB8 /* DreiWeatherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4DE94A2D57639F00E7CAB8 /* Build configuration list for PBXNativeTarget "DreiWeatherUITests" */;
+			buildPhases = (
+				AA4DE9362D57639F00E7CAB8 /* Sources */,
+				AA4DE9372D57639F00E7CAB8 /* Frameworks */,
+				AA4DE9382D57639F00E7CAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA4DE93C2D57639F00E7CAB8 /* PBXTargetDependency */,
+			);
+			name = DreiWeatherUITests;
+			productName = DreiWeatherUITests;
+			productReference = AA4DE93A2D57639F00E7CAB8 /* DreiWeatherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA4DE9132D57639D00E7CAB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					AA4DE91A2D57639D00E7CAB8 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					AA4DE92F2D57639F00E7CAB8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = AA4DE91A2D57639D00E7CAB8;
+					};
+					AA4DE9392D57639F00E7CAB8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = AA4DE91A2D57639D00E7CAB8;
+					};
+				};
+			};
+			buildConfigurationList = AA4DE9162D57639D00E7CAB8 /* Build configuration list for PBXProject "DreiWeather" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = AA4DE9122D57639D00E7CAB8;
+			productRefGroup = AA4DE91C2D57639D00E7CAB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA4DE91A2D57639D00E7CAB8 /* DreiWeather */,
+				AA4DE92F2D57639F00E7CAB8 /* DreiWeatherTests */,
+				AA4DE9392D57639F00E7CAB8 /* DreiWeatherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA4DE9192D57639D00E7CAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4DE9262D57639F00E7CAB8 /* Preview Assets.xcassets in Resources */,
+				AA4DE94F2D57649900E7CAB8 /* Localizable.strings in Resources */,
+				AA4DE9232D57639F00E7CAB8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DE92E2D57639F00E7CAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DE9382D57639F00E7CAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA4DE9172D57639D00E7CAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4DE92B2D57639F00E7CAB8 /* DreiWeather.xcdatamodeld in Sources */,
+				AA4DE9282D57639F00E7CAB8 /* Persistence.swift in Sources */,
+				AA4DE9212D57639D00E7CAB8 /* ContentView.swift in Sources */,
+				AA4DE91F2D57639D00E7CAB8 /* DreiWeatherApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DE92C2D57639F00E7CAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4DE9352D57639F00E7CAB8 /* DreiWeatherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA4DE9362D57639F00E7CAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4DE93F2D57639F00E7CAB8 /* DreiWeatherUITests.swift in Sources */,
+				AA4DE9412D57639F00E7CAB8 /* DreiWeatherUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA4DE9322D57639F00E7CAB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA4DE91A2D57639D00E7CAB8 /* DreiWeather */;
+			targetProxy = AA4DE9312D57639F00E7CAB8 /* PBXContainerItemProxy */;
+		};
+		AA4DE93C2D57639F00E7CAB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA4DE91A2D57639D00E7CAB8 /* DreiWeather */;
+			targetProxy = AA4DE93B2D57639F00E7CAB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA4DE94D2D57649900E7CAB8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA4DE94E2D57649900E7CAB8 /* en */,
+				AA4DE9502D5764BF00E7CAB8 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA4DE9422D57639F00E7CAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA4DE9432D57639F00E7CAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA4DE9452D57639F00E7CAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DreiWeather/Preview Content\"";
+				DEVELOPMENT_TEAM = RXXT9DTJ9H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Md.DreiWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA4DE9462D57639F00E7CAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DreiWeather/Preview Content\"";
+				DEVELOPMENT_TEAM = RXXT9DTJ9H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Md.DreiWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA4DE9482D57639F00E7CAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RXXT9DTJ9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Md.DreiWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreiWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DreiWeather";
+			};
+			name = Debug;
+		};
+		AA4DE9492D57639F00E7CAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RXXT9DTJ9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Md.DreiWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreiWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DreiWeather";
+			};
+			name = Release;
+		};
+		AA4DE94B2D57639F00E7CAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RXXT9DTJ9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Md.DreiWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DreiWeather;
+			};
+			name = Debug;
+		};
+		AA4DE94C2D57639F00E7CAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RXXT9DTJ9H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Md.DreiWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DreiWeather;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA4DE9162D57639D00E7CAB8 /* Build configuration list for PBXProject "DreiWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DE9422D57639F00E7CAB8 /* Debug */,
+				AA4DE9432D57639F00E7CAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA4DE9442D57639F00E7CAB8 /* Build configuration list for PBXNativeTarget "DreiWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DE9452D57639F00E7CAB8 /* Debug */,
+				AA4DE9462D57639F00E7CAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA4DE9472D57639F00E7CAB8 /* Build configuration list for PBXNativeTarget "DreiWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DE9482D57639F00E7CAB8 /* Debug */,
+				AA4DE9492D57639F00E7CAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA4DE94A2D57639F00E7CAB8 /* Build configuration list for PBXNativeTarget "DreiWeatherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA4DE94B2D57639F00E7CAB8 /* Debug */,
+				AA4DE94C2D57639F00E7CAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AA4DE9292D57639F00E7CAB8 /* DreiWeather.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AA4DE92A2D57639F00E7CAB8 /* DreiWeather.xcdatamodel */,
+			);
+			currentVersion = AA4DE92A2D57639F00E7CAB8 /* DreiWeather.xcdatamodel */;
+			path = DreiWeather.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AA4DE9132D57639D00E7CAB8 /* Project object */;
+}
