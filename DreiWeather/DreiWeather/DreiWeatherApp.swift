@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct DreiWeatherApp: App {
-    let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController.shared.container.viewContext
+    init() {
+        persistenceController.mergePolicy = NSOverwriteMergePolicy
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainWeatherView(viewModel: MainWeatherViewModel(coreDataService: CoreDataService(viewContext: persistenceController)))
         }
     }
 }

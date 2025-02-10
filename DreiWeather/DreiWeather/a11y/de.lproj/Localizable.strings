@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  DreiWeather
+
+  Created by Mateo Doslic on 08.02.2025..
+  
+*/
+
+"unknown" = "Unbekannt";
+"feels_like" = "Gefühlt wie";
+"humidity" = "Luftfeuchtigkeit";
+"min" = "Min";
+"max" = "Max";
+"last_updated" = "Zuletzt aktualisiert:";
+"delete_weather" = "Wetter löschen";
+"cancel" = "Abbrechen";
+"delete" = "Löschen";
+"weather_title" = "Wetter";
+"cities_unavailable_title" = "Keine gespeicherten Städte";
+"cities_unavailable_body" = "Ihre gespeicherten Städte werden hier angezeigt";
+"current_location" = "Aktueller Standort";
+"search_bar" = "Stadt suchen...";
+"error" = "Fehler";
+"ok" = "OK";
+"search_city" = "Stadt suchen";
+"done" = "Fertig";
+"weather_unavailable_title" = "Geben Sie einen Stadtnamen ein";
+"weather_unavailable_body" = "Suchen Sie nach einer Stadt, um das Wetter zu sehen";
+"save_weather" = "Speichern";
+"server_error" = "Unbekannter Serverfehler";

@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  DreiWeather
+
+  Created by Mateo Doslic on 08.02.2025..
+  
+*/
+
+"unknown" = "Unknown";
+"feels_like" = "Feels like";
+"humidity" = "Humidity";
+"min" = "Min";
+"max" = "Max";
+"last_updated" = "Last updated:";
+"delete_weather" = "Delete Weather";
+"cancel" = "Cancel";
+"delete" = "Delete";
+"weather_title" = "Weather";
+"cities_unavailable_title" = "No Saved Cities";
+"cities_unavailable_body" = "Your saved cities will appear here";
+"current_location" = "Current Location";
+"search_bar" = "Search city...";
+"error" = "Error";
+"ok" = "OK";
+"search_city" = "Search City";
+"done" = "Done";
+"weather_unavailable_title" = "Enter a city name";
+"weather_unavailable_body" = "Search for a city to see its weather";
+"save_weather" = "Save";
+"server_error" = "Unknown server error";
