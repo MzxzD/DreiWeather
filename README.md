@@ -14,6 +14,8 @@ Utils/Constants.swift
 ```
 and replace `apiKey` with your own.
 
+the apiKey in question is from [OpenWeatherMap](https://openweathermap.org/api)
+
 Hit run and off you go!
 
 
