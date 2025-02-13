@@ -7,7 +7,7 @@
 
 import CoreData
 
-final class CoreDataService {
+class CoreDataService: CoreDataServicable {
     private let viewContext: NSManagedObjectContext
     
     init(viewContext: NSManagedObjectContext) {
@@ -77,3 +77,14 @@ final class CoreDataService {
         save()
     }
 } 
+
+protocol CoreDataServicable {
+    func fetchAllWeather() throws -> [CachedWeather]
+    func fetchWeather(predicate: NSPredicate) throws -> CachedWeather?
+    func saveWeather(_ weather: WeatherResponse, isCurrentLocation: Bool) throws -> CachedWeather
+    func delete(_ weather: CachedWeather)
+    func save()
+    func undo()
+    func updateSortOrder(items: [CachedWeather])
+}
+

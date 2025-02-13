@@ -4,8 +4,8 @@ struct WeatherGrid: View {
     let currentWeather: CachedWeather?
     let weatherData: [CachedWeather]
     let selectedWeather: CachedWeather?
-    let onSelect: (CachedWeather?) -> Void
-    let onDelete: (CachedWeather) -> Void
+    let onSelect: (CachedWeather?) async -> Void
+    let onDelete: (CachedWeather) async -> Void
     let onRefresh: () async -> Void
     
     var body: some View {
@@ -30,19 +30,22 @@ struct WeatherGrid: View {
             WeatherCard(weather: .persistable(weather))
                 .transition(.scale.combined(with: .opacity))
                 .onTapGesture {
-                    withAnimation(Constants.CustomAnimation.defaultSpring) {
-                        onSelect(nil)
+                    Task { @MainActor in
+                        
+                       await onSelect(nil)
                     }
+                    
                 }
-        } else {
-            CityCard(weather: weather)
-                .transition(.scale.combined(with: .opacity))
+        
+    } else {
+        CityCard(weather: weather)
+            .transition(.scale.combined(with: .opacity))
                 .overlay(alignment: .bottomTrailing) {
                     LocationBadge()
                 }
                 .onTapGesture {
-                    withAnimation(Constants.CustomAnimation.defaultSpring) {
-                        onSelect(weather)
+                    Task { @MainActor in
+                        await onSelect(weather)
                     }
                 }
         }
@@ -52,18 +55,18 @@ struct WeatherGrid: View {
     private func weatherCard(_ weather: CachedWeather) -> some View {
         if selectedWeather?.objectID == weather.objectID {
             WeatherCard(weather: .persistable(weather)) {
-                onDelete(weather)
+                await onDelete(weather)
             }
             .onTapGesture {
-                withAnimation(Constants.CustomAnimation.defaultSpring) {
-                    onSelect(nil)
+                Task { @MainActor in
+                    await onSelect(nil)
                 }
             }
         } else {
             CityCard(weather: weather)
                 .onTapGesture {
-                    withAnimation(Constants.CustomAnimation.defaultSpring) {
-                        onSelect(weather)
+                    Task { @MainActor in
+                       await onSelect(weather)
                     }
                 }
         }

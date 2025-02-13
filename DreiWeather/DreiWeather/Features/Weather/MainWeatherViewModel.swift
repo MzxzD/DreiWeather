@@ -23,13 +23,13 @@ final class MainWeatherViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     private let weatherService: WeatherServiceProtocol
-    private let coreDataService: CoreDataService
+    private let coreDataService: CoreDataServicable
     private let locationService: LocationServiceProtocol
     private let networkService: NetworkService
     
     init(
         weatherService: WeatherServiceProtocol = WeatherService(),
-        coreDataService: CoreDataService,
+        coreDataService: CoreDataServicable,
         locationService: LocationServiceProtocol = LocationService(),
         networkService: NetworkService = .shared
     ) {
@@ -41,8 +41,8 @@ final class MainWeatherViewModel: ObservableObject {
     }
     
     private func setupSubscriptions() {
-        guard let locationService = locationService as? LocationService else { return
-        }
+        guard let locationService = locationService as? LocationService
+        else { return }
         
         locationService.$lastKnownLocation
             .sink { [weak self] _ in
@@ -111,10 +111,8 @@ final class MainWeatherViewModel: ObservableObject {
         showingSearch = true
     }
     
-    func selectWeather(_ weather: CachedWeather?) {
-        Task { @MainActor in
-            selectedWeather = weather
-        }
+    func selectWeather(_ weather: CachedWeather?) async {
+        selectedWeather = weather
     }
     
     func deselectWeather() {
@@ -123,12 +121,10 @@ final class MainWeatherViewModel: ObservableObject {
         }
     }
     
-    func deleteWeather(_ weather: CachedWeather) {
-        Task { @MainActor in
-            coreDataService.delete(weather)
-            selectedWeather = nil
-            await fetchData()
-        }
+    func deleteWeather(_ weather: CachedWeather) async {
+        coreDataService.delete(weather)
+        selectedWeather = nil
+        await fetchData()
     }
     
     func refreshData() async {

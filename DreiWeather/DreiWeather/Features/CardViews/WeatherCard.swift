@@ -10,11 +10,11 @@ import SwiftUI
 
 struct WeatherCard: View {
     let weather: CardWeather
-    var onDelete: (() -> Void)?
+    var onDelete: (() async -> Void)?
     @State private var showingDeleteConfirmation = false
     
     init(weather: WeatherCardComponent,
-         onDelete: ( () -> Void)? = nil
+         onDelete: ( () async -> Void)? = nil
     ) {
         self.weather = weather.mapToCardWeather()
         self.onDelete = onDelete
@@ -107,6 +107,8 @@ struct WeatherCard: View {
     }
     
     private func deleteCity() {
-        onDelete!()
+        Task { @MainActor in
+            await self.onDelete!()
+        }
     }
 }

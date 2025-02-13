@@ -97,6 +97,12 @@
 		AA4DE9B22D57BE8900E7CAB8 /* CachedWeather+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9AE2D57BE8900E7CAB8 /* CachedWeather+CoreDataProperties.swift */; };
 		AA4DE9B32D57BE8900E7CAB8 /* CachedWeather+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9AD2D57BE8900E7CAB8 /* CachedWeather+CoreDataClass.swift */; };
 		AA4DE9B42D57BE8900E7CAB8 /* CachedWeather+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9AE2D57BE8900E7CAB8 /* CachedWeather+CoreDataProperties.swift */; };
+		AA4DE9EA2D5B671E00E7CAB8 /* MainWeatherViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4DE9E82D5B671E00E7CAB8 /* MainWeatherViewModelTests.swift */; };
+		B5F694582D5DE9CC006B0D33 /* MockCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F694572D5DE9BF006B0D33 /* MockCoreDataService.swift */; };
+		B5F6945A2D5DE9FA006B0D33 /* MockWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F694592D5DE9F3006B0D33 /* MockWeatherService.swift */; };
+		B5F6945C2D5DEA23006B0D33 /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6945B2D5DEA19006B0D33 /* MockLocationService.swift */; };
+		B5F6945E2D5DEA4B006B0D33 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6945D2D5DEA40006B0D33 /* MockNetworkService.swift */; };
+		B5F694602D5DEA71006B0D33 /* WeatherResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F6945F2D5DEA61006B0D33 /* WeatherResponse+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +159,12 @@
 		AA4DE9A62D57BD3100E7CAB8 /* WeatherCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
 		AA4DE9AD2D57BE8900E7CAB8 /* CachedWeather+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedWeather+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AA4DE9AE2D57BE8900E7CAB8 /* CachedWeather+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedWeather+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AA4DE9E82D5B671E00E7CAB8 /* MainWeatherViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWeatherViewModelTests.swift; sourceTree = "<group>"; };
+		B5F694572D5DE9BF006B0D33 /* MockCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataService.swift; sourceTree = "<group>"; };
+		B5F694592D5DE9F3006B0D33 /* MockWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherService.swift; sourceTree = "<group>"; };
+		B5F6945B2D5DEA19006B0D33 /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
+		B5F6945D2D5DEA40006B0D33 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		B5F6945F2D5DEA61006B0D33 /* WeatherResponse+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherResponse+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +221,7 @@
 		AA4DE9122D57639D00E7CAB8 = {
 			isa = PBXGroup;
 			children = (
+				AA4DE9E92D5B671E00E7CAB8 /* DreiWeatherTests */,
 				AA4DE91D2D57639D00E7CAB8 /* DreiWeather */,
 				AA4DE91C2D57639D00E7CAB8 /* Products */,
 			);
@@ -365,6 +378,27 @@
 			name = Compoments;
 			sourceTree = "<group>";
 		};
+		AA4DE9E92D5B671E00E7CAB8 /* DreiWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5F694562D5DE9A9006B0D33 /* Mock */,
+				AA4DE9E82D5B671E00E7CAB8 /* MainWeatherViewModelTests.swift */,
+			);
+			path = DreiWeatherTests;
+			sourceTree = "<group>";
+		};
+		B5F694562D5DE9A9006B0D33 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6945F2D5DEA61006B0D33 /* WeatherResponse+Extensions.swift */,
+				B5F6945D2D5DEA40006B0D33 /* MockNetworkService.swift */,
+				B5F6945B2D5DEA19006B0D33 /* MockLocationService.swift */,
+				B5F694592D5DE9F3006B0D33 /* MockWeatherService.swift */,
+				B5F694572D5DE9BF006B0D33 /* MockCoreDataService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,7 +463,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					AA4DE91A2D57639D00E7CAB8 = {
 						CreatedOnToolsVersion = 15.3;
@@ -537,17 +571,21 @@
 			files = (
 				7D305E822D59FD440095B3B3 /* Persistence.swift in Sources */,
 				AA4DE98E2D57B99800E7CAB8 /* MainWeatherViewModel.swift in Sources */,
+				B5F694602D5DEA71006B0D33 /* WeatherResponse+Extensions.swift in Sources */,
 				7D305E7F2D59FD170095B3B3 /* BackgroundGradient.swift in Sources */,
+				B5F6945A2D5DE9FA006B0D33 /* MockWeatherService.swift in Sources */,
 				7D305E7B2D59FCFA0095B3B3 /* WeatherIcon.swift in Sources */,
 				7D305E772D59FC8D0095B3B3 /* WeatherCardComponent.swift in Sources */,
 				7D6C34CD2D59173700518E1A /* WeatherGrid.swift in Sources */,
 				AA4DE9692D57B81700E7CAB8 /* WeatherService.swift in Sources */,
+				B5F6945C2D5DEA23006B0D33 /* MockLocationService.swift in Sources */,
 				7D305E792D59FC9B0095B3B3 /* Constants.swift in Sources */,
 				AA4DE9922D57B9AB00E7CAB8 /* SearchCityViewModel.swift in Sources */,
 				AA4DE97D2D57B8A100E7CAB8 /* APIEndpoint.swift in Sources */,
 				AA4DE9A32D57BD0D00E7CAB8 /* SearchBar.swift in Sources */,
 				7D6C34CA2D59173700518E1A /* WeatherList.swift in Sources */,
 				AA4DE9712D57B87D00E7CAB8 /* WeatherError.swift in Sources */,
+				B5F6945E2D5DEA4B006B0D33 /* MockNetworkService.swift in Sources */,
 				AA4DE9872D57B98400E7CAB8 /* LocationBadge.swift in Sources */,
 				AA4DE9632D57B81700E7CAB8 /* LocationService.swift in Sources */,
 				AA4DE9A82D57BD3100E7CAB8 /* CityCard.swift in Sources */,
@@ -559,7 +597,9 @@
 				7D6C34C52D59172500518E1A /* MainWeatherView.swift in Sources */,
 				AA4DE97A2D57B8A100E7CAB8 /* WeatherResponse.swift in Sources */,
 				AA4DE99E2D57BC6800E7CAB8 /* SearchCityView.swift in Sources */,
+				AA4DE9EA2D5B671E00E7CAB8 /* MainWeatherViewModelTests.swift in Sources */,
 				AA4DE9AB2D57BD3100E7CAB8 /* WeatherCard.swift in Sources */,
+				B5F694582D5DE9CC006B0D33 /* MockCoreDataService.swift in Sources */,
 				AA4DE99A2D57BA4B00E7CAB8 /* String+Localization.swift in Sources */,
 				AA4DE9B12D57BE8900E7CAB8 /* CachedWeather+CoreDataClass.swift in Sources */,
 				AA4DE9B22D57BE8900E7CAB8 /* CachedWeather+CoreDataProperties.swift in Sources */,
@@ -811,8 +851,6 @@
 		AA4DE9482D57639F00E7CAB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RXXT9DTJ9H;
@@ -831,8 +869,6 @@
 		AA4DE9492D57639F00E7CAB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RXXT9DTJ9H;
@@ -851,7 +887,6 @@
 		AA4DE94B2D57639F00E7CAB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RXXT9DTJ9H;
@@ -869,7 +904,6 @@
 		AA4DE94C2D57639F00E7CAB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RXXT9DTJ9H;

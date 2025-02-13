@@ -10,14 +10,23 @@ import CoreData
 
 @main
 struct DreiWeatherApp: App {
-    let persistenceController = PersistenceController.shared.container.viewContext
+    let persistenceController: NSManagedObjectContext!
     init() {
+        guard ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil else {
+            persistenceController = nil
+            return
+        }
+        persistenceController = PersistenceController.shared.container.viewContext
         persistenceController.mergePolicy = NSOverwriteMergePolicy
     }
-
+    
+    
     var body: some Scene {
         WindowGroup {
-            MainWeatherView(viewModel: MainWeatherViewModel(coreDataService: CoreDataService(viewContext: persistenceController)))
+            if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
+                MainWeatherView(viewModel: MainWeatherViewModel(coreDataService: CoreDataService(viewContext: persistenceController)))
+            }
+            
         }
     }
 }
