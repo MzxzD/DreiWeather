@@ -33,6 +33,12 @@ struct MainWeatherView: View {
                     }
                 }
             }
+            .refreshable {
+                Task {
+                    await viewModel.refreshData()
+                }
+            }
+            .redacted(reason: !viewModel.isRefreshing ? [] : .placeholder)
             .navigationTitle("weather_title")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.clear, for: .navigationBar)
@@ -61,8 +67,14 @@ struct MainWeatherView: View {
             .alert(item: $viewModel.error) { error in
                 Alert(title: Text("error"),
                       message: Text(error.message),
-                      dismissButton: .default(Text("ok")))
+                      dismissButton: .default(
+                        Text("ok"), action: {
+                            Task {
+                                viewModel.error = nil
+                            }
+                        }))
             }
+            .animation(.default, value: viewModel.selectedWeather)
             .task {
                 await viewModel.fetchData()
             }

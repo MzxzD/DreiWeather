@@ -10,17 +10,15 @@ struct WeatherGrid: View {
     
     var body: some View {
         ScrollView {
-            RefreshableScrollView(onRefresh: onRefresh) {
-                LazyVStack(spacing: 16) {
-                    if let currentWeather {
-                        currentLocationView(currentWeather)
-                    }
-                    ForEach(weatherData) { weather in
-                        weatherCard(weather)
-                    }
+            LazyVStack(spacing: 16) {
+                if let currentWeather {
+                    currentLocationView(currentWeather)
                 }
-                .padding()
+                ForEach(weatherData) { weather in
+                    weatherCard(weather)
+                }
             }
+            .padding()
         }
     }
     
@@ -30,21 +28,19 @@ struct WeatherGrid: View {
             WeatherCard(weather: .persistable(weather))
                 .transition(.scale.combined(with: .opacity))
                 .onTapGesture {
-                    Task { @MainActor in
-                        
-                       await onSelect(nil)
+                    Task {
+                        await onSelect(nil)
                     }
-                    
                 }
-        
-    } else {
-        CityCard(weather: weather)
-            .transition(.scale.combined(with: .opacity))
+            
+        } else {
+            CityCard(weather: weather)
+                .transition(.scale.combined(with: .opacity))
                 .overlay(alignment: .bottomTrailing) {
                     LocationBadge()
                 }
                 .onTapGesture {
-                    Task { @MainActor in
+                    Task {
                         await onSelect(weather)
                     }
                 }
@@ -66,9 +62,9 @@ struct WeatherGrid: View {
             CityCard(weather: weather)
                 .onTapGesture {
                     Task { @MainActor in
-                       await onSelect(weather)
+                        await onSelect(weather)
                     }
                 }
         }
     }
-} 
+}

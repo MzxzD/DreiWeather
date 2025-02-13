@@ -43,7 +43,7 @@ final class SearchCityViewModel: ObservableObject {
             } catch APIError.serverError(let message) {
                 self.error = WeatherError(message: message)
             } catch {
-                self.error = .serverError
+                self.error = .networkError
             }
             isLoading = false
         }

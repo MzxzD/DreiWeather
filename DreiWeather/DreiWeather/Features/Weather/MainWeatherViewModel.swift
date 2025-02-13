@@ -15,7 +15,6 @@ import Combine
 final class MainWeatherViewModel: ObservableObject {
     @Published private(set) var weatherData: [CachedWeather] = []
     @Published private(set) var currentLocationWeather: CachedWeather?
-    @Published private(set) var isLoading = false
     @Published private(set) var selectedWeather: CachedWeather?
     @Published private(set) var isRefreshing = false
     @Published var showingSearch = false
@@ -47,13 +46,16 @@ final class MainWeatherViewModel: ObservableObject {
         locationService.$lastKnownLocation
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                Task { await self.fetchCurrentLocationWeather() }
+                Task {
+                    if self.networkService.hasNetworkConnection {
+                        await self.fetchCurrentLocationWeather()
+                    }
+                }
             }
             .store(in: &cancellables)
     }
     
     func fetchData() async {
-        isLoading = true
         locationService.checkLocationAuthorization()
         
         do {
@@ -70,9 +72,10 @@ final class MainWeatherViewModel: ObservableObject {
                 self.weatherData = cachedWeathers
             }
         } catch {
-            self.error = WeatherError.init(message: error.localizedDescription)
+            if self.error == nil {
+                self.error = WeatherError.init(message: error.localizedDescription)
+            }
         }
-        isLoading = false
     }
     
     func updateWeatherData(cityNames: [String]) async throws {
@@ -81,20 +84,20 @@ final class MainWeatherViewModel: ObservableObject {
                 let weatherData = try await weatherService.fetchWeather(for: city)
                 _ = try coreDataService.saveWeather(weatherData, isCurrentLocation: false)
             } catch let err {
-                self.error = WeatherError(message: err.localizedDescription)
+                if self.error == nil {
+                    self.error = WeatherError(message: err.localizedDescription)
+                }
                 continue
             }
         }
         
         self.weatherData = (try? coreDataService.fetchAllWeather()) ?? []
-        isLoading = false
     }
     
     func fetchCurrentLocationWeather() async {
         
         if let coordinate = locationService.lastKnownLocation {
             do {
-                isLoading = true
                 let weather = try await weatherService.fetchWeatherForLocation(
                     latitude: coordinate.latitude,
                     longitude: coordinate.longitude
@@ -102,7 +105,9 @@ final class MainWeatherViewModel: ObservableObject {
                 currentLocationWeather = try coreDataService.saveWeather(weather, isCurrentLocation: true)
                 error = nil
             } catch {
-                self.error = WeatherError(message: error.localizedDescription)
+                if self.error == nil {
+                    self.error = WeatherError(message: error.localizedDescription)
+                }
             }
         }
     }
@@ -115,21 +120,19 @@ final class MainWeatherViewModel: ObservableObject {
         selectedWeather = weather
     }
     
-    func deselectWeather() {
-        Task { @MainActor in
-            selectedWeather = nil
-        }
-    }
-    
     func deleteWeather(_ weather: CachedWeather) async {
-        coreDataService.delete(weather)
         selectedWeather = nil
+        coreDataService.delete(weather)
         await fetchData()
     }
     
     func refreshData() async {
         isRefreshing = true
-        await fetchData()
+        if networkService.hasNetworkConnection {
+            await fetchData()
+        } else {
+            self.error = WeatherError.networkError
+        }
         isRefreshing = false
     }
     

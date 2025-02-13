@@ -24,8 +24,5 @@ struct WeatherList: View {
         }
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
-        .refreshable {
-            await onRefresh()
-        }
     }
 } 

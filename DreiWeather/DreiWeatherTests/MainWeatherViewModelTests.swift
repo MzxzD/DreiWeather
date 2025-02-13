@@ -12,8 +12,7 @@ final class MainWeatherViewModelTests: XCTestCase {
     @MainActor
     func testFetchData() async throws {
         //Given
-        let coreDataService = //CoreDataService(viewContext: PersistenceController(inMemory: true).container.viewContext)
-        MockCoreDataService()
+        let coreDataService = MockCoreDataService()
         let _ = try coreDataService.saveWeather(.mock())
         let _ = try coreDataService.saveWeather(.mock(name: "LA"))
         let sut = MainWeatherViewModel(

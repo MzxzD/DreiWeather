@@ -61,10 +61,12 @@ If you want to delete, select one of the cards and press the delete button ðŸ—‘ï
 
 ## Todo
 
-- [ ] Add nice animation transition from `CityCard` to `WeatherCard`
+- [x] Add nice animation transition from `CityCard` to `WeatherCard`
 - [ ] Lint
-- [ ] Tests
-    - [ ] Figure out why does CoreData crash in test env
+- [x] Tests
+    - [x] Figure out why does CoreData crash in test env
+    - Figured out why, but can't seem to fix it at this moment
+    - Mocked core data for testing assuming core data will work
 
 
 ## Summary
